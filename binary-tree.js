@@ -127,13 +127,16 @@ class BinaryTree {
 		return treeSize;
 	}
 
-	isEmpty() {
-		inOrder(node) {
-			if (node == null) return 0;
-			return this.inOrder(node.left) + this.inOrder(node.right) + 1;
-		}
-
+	inOrder(node) {
+		if (node == null) return 0;
+		return this.inOrder(node.left) + this.inOrder(node.right) + 1;
 	}
+
+	isEmpty() {
+		return this.root === null||this.size() == 0;
+	}
+
+
 	getMin(){
 		var current = this.root;
 		while (current.left != null) {
