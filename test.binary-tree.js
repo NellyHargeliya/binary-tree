@@ -154,6 +154,19 @@ describe('BinaryTree', () => {
 
 			bt.should.deep.equal(btCopy);
 		});
+		/*
+		 it('removes node which contains two children', () => {
+		 sinon.spy(bt, 'contains');
+
+		 bt.remove(10);
+		 btCopy.root.left = btCopy.root.left.left.left.right;
+
+		 bt.should.deep.equal(btCopy);
+
+		 });
+
+		 */
+
 	});
 
 	describe('#size()', () => {
